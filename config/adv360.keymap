@@ -63,7 +63,7 @@
         keypad {
             bindings = <
 &trans  &trans           &trans           &trans           &trans           &trans  &trans                                            &none   &trans  &trans          &trans          &trans      &trans    &kp MINUS
-&trans  &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &none                                             &none   &trans  &kp HOME        &kp UP_ARROW    &kp eEND    &trans    &kp BSLH
+&trans  &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &none                                             &none   &trans  &kp HOME        &kp UP_ARROW    &kp END     &trans    &kp BSLH
 &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &none   &kp LCTRL  &trans      &trans  &kp RCTRL  &none   &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &trans    &kp SQT
 &trans  &trans           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans                     &trans      &trans                     &trans  &trans          &trans          &trans      &trans    &kp RSHFT
 &mo 2   &trans           &trans           &trans           &trans                   &trans  &trans     &trans      &trans  &trans     &trans          &kp UP          &kp DOWN        &kp KP_DOT  &kp RBKT  &mo 2
