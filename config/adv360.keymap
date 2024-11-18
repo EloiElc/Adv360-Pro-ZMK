@@ -47,14 +47,29 @@
         };
 
         copy {
-            bindings = <&none>;
+            bindings = <&kp LG(C)>;
             key-positions = <48 49>;
             layers = <0>;
         };
 
         paste {
-            bindings = <&none>;
+            bindings = <&kp LG(V)>;
             key-positions = <49 50>;
+        };
+
+        equal {
+            bindings = <&kp KP_EQUAL>;
+            key-positions = <23 41>;
+        };
+
+        plus {
+            bindings = <&kp KP_PLUS>;
+            key-positions = <24 42>;
+        };
+
+        cut {
+            bindings = <&kp LG(X)>;
+            key-positions = <47 48>;
         };
     };
 
