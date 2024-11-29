@@ -72,13 +72,7 @@
         };
     };
 
-    macros {  
-    macro_kyper: macro_hyper {
-    compatible = "zmk,behavior-macro";
-    label = "macro_hyper";
-    #binding-cells = <0>;
-    bindings = <&kp RALT>, <&kp RCTRL>, <&kp RSHIFT>, <&kp RGUI>;
-      }
+    macros {
     };
 
     combos {
