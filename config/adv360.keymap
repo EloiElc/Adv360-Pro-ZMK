@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define LHYP LS(LC(LA(LGUI)))
@@ -120,11 +121,11 @@
 
         default_layer {
             bindings = <
-&kp ESC       &kp N1              &kp N2         &kp N3            &kp N4            &kp N5  &tog 1                                                                 &mo 3          &kp N6  &kp N7             &kp N8             &kp N9         &kp N0                  &kp TILDE
-&kp TAB       &kp Q               &kp W          &kp E             &kp R             &kp T   &none                                                                  &none          &kp Y   &kp U              &kp I              &kp O          &kp P                   &kp BSLH
-&kp LEFT_GUI  &hrml LEFT_GUI A  &hrml LEFT_ALT S  &hrml LCTRL D  &hrml LEFT_SHIFT F  &kp G   &none         &mo 2        &kp LGUI          &kp RGUI       &mo 1      &none          &kp H   &hrmr RIGHT_SHIFT J  &hrmr RCTRL K  &hrmr RIGHT_ALT L  &hrmr RIGHT_GUI SEMI  &kp SQT
-&kp LSHFT     &kp Z               &kp X          &kp C             &kp V             &kp B                              &kp LEFT_ALT      &kp RIGHT_ALT                            &kp N   &kp M              &kp COMMA          &kp DOT        &kp FSLH                &kp RSHFT
-&kp TILDE     &kp GRAVE           &kp CAPS       &kp LMEH          &kp LHYP                 &kp BACKSPACE  &kp DELETE   &kp LCTRL         &kp RCTRL      &kp ENTER  &kp SPACE              &kp RHYP           &kp RMEH           &kp LBKT       &kp RBKT                &kp GRAVE
+&kp ESC       &kp N1            &kp N2            &kp N3         &kp N4              &kp N5  &tog 1                                                                 &mo 3      &kp N6  &kp N7               &kp N8         &kp N9             &kp N0                &kp TILDE
+&kp TAB       &kp Q             &kp W             &kp E          &kp R               &kp T   &tog 4                                                                 &none      &kp Y   &kp U                &kp I          &kp O              &kp P                 &kp BSLH
+&kp LEFT_GUI  &hrml LEFT_GUI A  &hrml LEFT_ALT S  &hrml LCTRL D  &hrml LEFT_SHIFT F  &kp G   &none          &mo 2       &kp LGUI          &kp RGUI       &mo 1      &none      &kp H   &hrmr RIGHT_SHIFT J  &hrmr RCTRL K  &hrmr RIGHT_ALT L  &hrmr RIGHT_GUI SEMI  &kp SQT
+&kp LSHFT     &kp Z             &kp X             &kp C          &kp V               &kp B                              &kp LEFT_ALT      &kp RIGHT_ALT                        &kp N   &kp M                &kp COMMA      &kp DOT            &kp FSLH              &kp RSHFT
+&kp TILDE     &kp GRAVE         &kp CAPS          &kp LMEH       &kp LHYP                    &kp BACKSPACE  &kp DELETE  &kp LCTRL         &kp RCTRL      &kp ENTER  &kp SPACE          &kp RHYP             &kp RMEH       &kp LBKT           &kp RBKT              &kp GRAVE
             >;
         };
 
@@ -155,6 +156,16 @@
 &none  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
 &none  &none         &none         &none         &macro_ver    &none                             &none      &none                                           &none  &none       &none       &none  &none  &none
 &none  &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &none  &none  &none
+            >;
+        };
+
+        gaming {
+            bindings = <
+&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &tog 0                                            &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp T   &trans                                            &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp A   &kp S   &kp D   &kp F   &kp G   &trans     &trans     &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B                         &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&kp RALT   &trans  &trans  &kp M   &kp I           &kp SPACE  &mkp LCLK  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
