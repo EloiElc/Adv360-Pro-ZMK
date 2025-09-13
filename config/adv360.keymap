@@ -22,7 +22,7 @@
 
 / {
     behaviors {
-      #include "version.dtsi"
+        #include "version.dtsi"
       #ifndef VERSION_MACRO
 
         macro_ver: macro_ver {
@@ -70,7 +70,6 @@
         };
     };
 
-
     combos {
         compatible = "zmk,combos";
 
@@ -95,19 +94,21 @@
         };
     };
 
+    macros {
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         windows {
             bindings = <
-&kp ESC  &kp N1         &kp N2            &kp N3            &kp N4              &kp N5  &none                                                   &mo 6      &kp N6  &kp N7               &kp N8             &kp N9             &kp N0            &kp TILDE
-&kp TAB  &kp Q          &kp W             &kp E             &kp R               &kp T   &trans                                                  &none      &kp Y   &kp U                &kp I              &kp O              &kp P             &kp BSLH
-&none    &hrml LCTRL A  &hrml LEFT_ALT S  &hrml LEFT_GUI D  &hrml LEFT_SHIFT F  &kp G   &trans         &mo 4       &mo 5      &mo 5  &mo 3      &none      &kp H   &hrmr RIGHT_SHIFT J  &hrmr RIGHT_GUI K  &hrmr RIGHT_ALT L  &hrmr RCTRL SEMI  &kp SQT
-&none    &kp Z          &kp X             &kp C             &kp V               &kp B                              &none      &none                        &kp N   &kp M                &kp COMMA          &kp DOT            &kp FSLH          &none
-&none    &kp GRAVE      &kp CAPS          &kp RMEH          &kp RHYP                    &kp BACKSPACE  &kp DELETE  &mo 4      &mo 3  &kp ENTER  &kp SPACE          &kp RHYP             &kp RMEH           &kp LBKT           &kp RBKT          &none
+&kp ESC         &kp N1         &kp N2            &kp N3            &kp N4              &kp N5  &none                                                                  &none      &kp N6  &kp N7               &kp N8             &kp N9             &kp N0            &kp TILDE
+&kp TAB         &kp Q          &kp W             &kp E             &kp R               &kp T   &trans                                                                 &none      &kp Y   &kp U                &kp I              &kp O              &kp P             &kp BSLH
+&kp LCTRL       &hrml LCTRL A  &hrml LEFT_ALT S  &hrml LEFT_GUI D  &hrml LEFT_SHIFT F  &kp G   &trans         &mo 4       &mo 2             &mo 1          &mo 3      &none      &kp H   &hrmr RIGHT_SHIFT J  &hrmr RIGHT_GUI K  &hrmr RIGHT_ALT L  &hrmr RCTRL SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z          &kp X             &kp C             &kp V               &kp B                              &kp LEFT_ALT      &kp RIGHT_ALT                        &kp N   &kp M                &kp COMMA          &kp DOT            &kp FSLH          &kp RIGHT_SHIFT
+&kp LEFT_ALT    &kp GRAVE      &kp CAPS          &none             &none                       &kp BACKSPACE  &kp DELETE  &kp LEFT_GUI      &kp RCTRL      &kp ENTER  &kp SPACE          &none                &none              &kp LBKT           &kp RBKT          &none
             >;
         };
-
 
         nav {
             bindings = <
