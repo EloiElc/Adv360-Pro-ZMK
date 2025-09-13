@@ -22,7 +22,6 @@
 
 / {
     behaviors {
-        #include "macros.dtsi"
       #include "version.dtsi"
       #ifndef VERSION_MACRO
 
@@ -71,8 +70,6 @@
         };
     };
 
-    macros {
-    };
 
     combos {
         compatible = "zmk,combos";
@@ -101,35 +98,16 @@
     keymap {
         compatible = "zmk,keymap";
 
-        mac {
-            bindings = <
-&kp ESC  &kp N1            &kp N2            &kp N3         &kp N4              &kp N5  &none                                                   &mo 6      &kp N6  &kp N7               &kp N8         &kp N9             &kp N0                &kp TILDE
-&kp TAB  &kp Q             &kp W             &kp E          &kp R               &kp T   &tog 1                                                  &none      &kp Y   &kp U                &kp I          &kp O              &kp P                 &kp BSLH
-&none    &hrml LEFT_GUI A  &hrml LEFT_ALT S  &hrml LCTRL D  &hrml LEFT_SHIFT F  &kp G   &tog 2         &mo 4       &mo 5      &mo 5  &mo 3      &none      &kp H   &hrmr RIGHT_SHIFT J  &hrmr RCTRL K  &hrmr RIGHT_ALT L  &hrmr RIGHT_GUI SEMI  &kp SQT
-&none    &kp Z             &kp X             &kp C          &kp V               &kp B                              &none      &none                        &kp N   &kp M                &kp COMMA      &kp DOT            &kp FSLH              &none
-&none    &kp GRAVE         &kp CAPS          &kp RMEH       &kp RHYP                    &kp BACKSPACE  &kp DELETE  &none      &none  &kp ENTER  &kp SPACE          &kp RHYP             &kp RMEH       &kp LBKT           &kp RBKT              &none
-            >;
-        };
-
         windows {
             bindings = <
 &kp ESC  &kp N1         &kp N2            &kp N3            &kp N4              &kp N5  &none                                                   &mo 6      &kp N6  &kp N7               &kp N8             &kp N9             &kp N0            &kp TILDE
-&kp TAB  &kp Q          &kp W             &kp E             &kp R               &kp T   &tog 1                                                  &none      &kp Y   &kp U                &kp I              &kp O              &kp P             &kp BSLH
+&kp TAB  &kp Q          &kp W             &kp E             &kp R               &kp T   &trans                                                  &none      &kp Y   &kp U                &kp I              &kp O              &kp P             &kp BSLH
 &none    &hrml LCTRL A  &hrml LEFT_ALT S  &hrml LEFT_GUI D  &hrml LEFT_SHIFT F  &kp G   &trans         &mo 4       &mo 5      &mo 5  &mo 3      &none      &kp H   &hrmr RIGHT_SHIFT J  &hrmr RIGHT_GUI K  &hrmr RIGHT_ALT L  &hrmr RCTRL SEMI  &kp SQT
 &none    &kp Z          &kp X             &kp C             &kp V               &kp B                              &none      &none                        &kp N   &kp M                &kp COMMA          &kp DOT            &kp FSLH          &none
 &none    &kp GRAVE      &kp CAPS          &kp RMEH          &kp RHYP                    &kp BACKSPACE  &kp DELETE  &mo 4      &mo 3  &kp ENTER  &kp SPACE          &kp RHYP             &kp RMEH           &kp LBKT           &kp RBKT          &none
             >;
         };
 
-        gaming {
-            bindings = <
-&kp ESC       &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans                                             &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp TAB       &kp Q   &kp W   &kp E   &kp R   &kp T   &trans                                             &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL     &kp A   &kp S   &kp D   &kp F   &kp G   &tog 2     &trans      &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHFT     &kp Z   &kp X   &kp C   &kp V   &kp B                          &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_ALT  &trans  &trans  &kp M   &kp I           &kp SPACE  &kp DELETE  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-            >;
-        };
 
         nav {
             bindings = <
